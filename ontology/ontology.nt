@@ -1,0 +1,123 @@
+<https://w3id.org/rc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/rc> <http://creativecommons.org/ns#license> "http://purl.org/NET/rdflicense/cc-by4.0" .
+<https://w3id.org/rc> <http://purl.org/dc/terms/created> "2018-11-21" .
+<https://w3id.org/rc> <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>\nJes\u00FAs Berm\u00FAdez <mailto:jesus.bermudez@ehu.eus>" .
+<https://w3id.org/rc> <http://purl.org/dc/terms/description> "The Result-Context ODP consists of a class eep:Execution (defined in the EEP ODP) and five properties that represent its context in terms of the result (rc:hasResult and rc:hasSimpleResult), temporal context (rc:hasGenerationTime and cp:hasTemporalContext) and spatial context (rc:hasSpatialContext).\n\nThis ODP is an extension of the EEP ODP (https://w3id.org/eep). It defines the context of an execution in terms of the result, temporal context and spatial context. The result can be modeled both with the rc:hasResult object property (if it is modeled as an RDF IRI) or the rc:hasSimpleResult data property (if it is modeled as an RDF Literal). As for the temporal context, the instant or time interval when an execution happens or has its effect is modeled with the rc:hasTemporalContext object property and the instant when an execution is generated is modeled with the rc:hasGenerationTime datatype property. Finally, the location where an execution takes place is modeled with the rc:hasSpatialContext object property."@en .
+<https://w3id.org/rc> <http://purl.org/dc/terms/modified> "2018-12-01" .
+<https://w3id.org/rc> <http://purl.org/dc/terms/title> "Result-Context ODP"@en .
+<https://w3id.org/rc> <http://purl.org/vocab/vann/preferredNamespacePrefix> "rc" .
+<https://w3id.org/rc> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/rc> .
+<https://w3id.org/rc> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> "(CQ1). Which is the value of an observation?   \n(CQ2). When is an actuation generated?   \n(CQ3). For what time interval or instant is valid an observation?   \n(CQ4). For what spatial location is valid an observation?"@en .
+<https://w3id.org/rc> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences> "An execution may have a result with value V which can be defined as an RDF URI or an RDF Literal. This value may be generated at a time T1 and may be valid for another time T2. Finally, this observation may be valid for a location L."@en .
+<https://w3id.org/rc> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent> "To represent properties that may define the context of the result of an execution."@en .
+<https://w3id.org/rc> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs> <https://w3id.org/eep> .
+<https://w3id.org/rc> <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios> "An observation (execution) of the temperature of room03 (spatial context) at 08:45 (temporal context) is 18\u00BAC (result).\n\nAn actuation (execution) generated at 9:00 (generation time) will activate the HVAC system of the room03 (spatial context) from 10:00 to 13:00 (temporal context) at a setpoint of 27\u00BAC (result)."@en .
+<https://w3id.org/rc> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rc#hasResult
+<https://w3id.org/rc#hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rc#hasResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
+<https://w3id.org/eep#Execution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rc#hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The link between an execution and the RDF URI representing the value associated to it."@en .
+<https://w3id.org/rc#hasResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/rc> .
+<https://w3id.org/rc#hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en .
+<https://w3id.org/rc#hasResult> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/rc#hasSpatialContext
+<https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
+<https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The location where an event takes place."@en .
+<https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/rc> .
+<https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial context"@en .
+<https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/rc#hasTemporalContext
+<https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
+<https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The time instant or interval when an event happens of has its effect. This temporal entity can be past, current or future."@en .
+<https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/rc> .
+<https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#label> "has temporal context"@en .
+<https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rc#hasGenerationTime
+<https://w3id.org/rc#hasGenerationTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rc#hasGenerationTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
+<https://w3id.org/rc#hasGenerationTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/rc#hasGenerationTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time instant when an execution is generated."@en .
+<https://w3id.org/rc#hasGenerationTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/rc> .
+<https://w3id.org/rc#hasGenerationTime> <http://www.w3.org/2000/01/rdf-schema#label> "has generation time"@en .
+<https://w3id.org/rc#hasGenerationTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/rc#hasSimpleResult
+<https://w3id.org/rc#hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rc#hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
+<https://w3id.org/rc#hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The link between an execution and the RDF Literal representing the value associated to it."@en .
+<https://w3id.org/rc#hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/rc> .
+<https://w3id.org/rc#hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#label> "has simple result"@en .
+<https://w3id.org/rc#hasSimpleResult> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+# 
+# http://www.w3.org/2006/time#TemporalEntity
+# 
+# https://w3id.org/eep#Execution
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rc#
+<https://w3id.org/rc#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/rc#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
