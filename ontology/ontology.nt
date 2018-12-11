@@ -37,7 +37,6 @@
 # https://w3id.org/rc#hasResult
 <https://w3id.org/rc#hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/rc#hasResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
-<https://w3id.org/eep#Execution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/rc#hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The link between an execution and the RDF URI representing the value associated to it."@en .
 <https://w3id.org/rc#hasResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/rc> .
 <https://w3id.org/rc#hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en .
@@ -47,7 +46,6 @@
 <https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
 <https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The location where an event takes place."@en .
 <https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/rc> .
 <https://w3id.org/rc#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial context"@en .
@@ -57,7 +55,6 @@
 <https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
 <https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TemporalEntity> .
-<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The time instant or interval when an event happens of has its effect. This temporal entity can be past, current or future."@en .
 <https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/rc> .
 <https://w3id.org/rc#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#label> "has temporal context"@en .
@@ -102,10 +99,13 @@
 <http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/eep#Execution
+<https://w3id.org/eep#Execution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # 
 # 
